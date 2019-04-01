@@ -1,0 +1,51 @@
+package senior;
+//사과가 있습니다. 가격은 1000원입니다.
+class Apple {
+	Apple(int a){ price = a;}
+	int price = 1000;
+}
+public class Study {
+	public static void main(String[] args) {
+		Apple app = new Apple(1000);
+		Apple app2 = new Apple(500);
+		String str1 = new String("대한민국");
+		String str2 = "대한민국";
+		String str3 = new String("대한민국");
+		String str4 = "대한민국";
+		if("대한민국".equals(str4)) {
+			System.out.println("O");
+		}else {
+			System.out.println("X");
+		}
+		if(str1.equals(str4)) {//str1과str2에 있는 문자열 내용 비교
+			System.out.println("동일하다.");
+		}else {
+			System.out.println("동일하지 않다.");
+		}
+		
+		if(str4 == str3) {
+			System.out.println("같다.");
+		}else {
+			System.out.println("다르다.");
+		}
+		//== 는 문자열의 메모리상의 위치를 비교한다.
+		//str1과 str2,str3,str4는 다르다.
+		//str2와 str3은 다르다. str2와 str4는 같다.
+		//str3과 str1,str2,str4는 다르다.
+		//str4와 str1은 다르다. str4와 str2는 같다. str4와 str3은 다르다.
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
