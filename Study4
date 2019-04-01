@@ -1,0 +1,84 @@
+package senior;
+
+//스즈끼가 가위,바위,보를 내밀었습니다.
+//도레이가 가위,바위,보를 내밀었습니다.
+//심판이 승패를 판단합니다.
+class Suzuki{
+	Suzuki(){}
+	String result;
+	String resultOfGababo(){
+		String str="";
+		int rnd = (int)((Math.random()*3)+1);
+		switch(rnd) {
+			case 1 : str = "가위"; break;
+			case 2 : str = "바위"; break;
+			case 3 : str = "보"; break;
+		}
+		return str;
+	}
+	void doGababo() {
+		result = resultOfGababo();
+//		int rnd = (int)((Math.random()*3)+1);
+//		switch(rnd) {
+//		case 1 : result = "가위"; break;
+//		case 2 : result = "바위"; break;
+//		case 3 : result = "보"; break;
+//		}
+//		if(rnd == 1) result = "가위";
+//		else if(rnd ==2) result = "바위";
+//		else result = "보";
+	}
+}
+class Dorei {
+	Dorei(){}
+	String result;
+	void doGababo() {
+		int rnd = (int)((Math.random()*3)+1);
+		switch(rnd) {
+		case 1 : result = "가위"; break;
+		case 2 : result = "바위"; break;
+		case 3 : result = "보"; break;
+		}
+//		if(rnd == 1) result = "가위";
+//		else if(rnd ==2) result = "바위";
+//		else result = "보";
+	}
+}
+class Simpan{
+	Simpan(){}
+	void winner(Suzuki s, Dorei d) {
+		if(s.result.equals(d.result)) {
+			System.out.println("무승부");
+		}else if( (s.result.equals("가위") && d.result.equals("보"))
+			|| (s.result.equals("바위") && d.result.equals("가위")) 
+			|| (s.result.equals("보") && d.result.equals("바위"))){
+			System.out.println("스즈키 승");
+		}else {
+			System.out.println("도레이 승");
+		}
+	}
+}
+public class Study4 {
+	public static void main(String[] args) {
+		Suzuki s = new Suzuki();
+		Dorei d = new Dorei();
+		Simpan si = new Simpan();
+		s.doGababo();		d.doGababo();
+		si.winner(s, d);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
