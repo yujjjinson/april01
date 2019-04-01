@@ -1,0 +1,34 @@
+package senior;
+
+class ExamplesOfStringMethod {
+	ExamplesOfStringMethod(){}
+	void doIt() {
+		String str = "대한민국만세";
+		String result = str.substring(2, 4);
+		System.out.println(result);
+		result = str.substring(2);
+		System.out.println(result);
+		String str2 = " Republic Of Korea ";
+		System.out.println("["+str2.trim()+"]");
+		System.out.println("대한민국".startsWith("대"));
+		System.out.println(str.matches("대한민국"));
+		System.out.println("Korea".matches("Korea"));
+		System.out.println(str2.length());
+		switch("Hello") {
+		case "Hello": System.out.println("영어입니다."); break;
+		case "안녕하세요":System.out.println("한국어입니다."); break;
+		}
+	}
+}
+public class Study3 {
+	public static void main(String[] args) {
+		ExamplesOfStringMethod e = new ExamplesOfStringMethod();
+		e.doIt();
+	}
+}
+
+
+
+
+
+
