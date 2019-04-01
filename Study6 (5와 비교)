@@ -1,0 +1,54 @@
+package senior;
+
+//이야기 생성 게임을 설계합니다.
+//(예:홍길동이 길거리에서 노래를 불렀다)
+class MakingStory{
+	MakingStory(){}
+	String str1,str2,str3,str4,str5;
+	//누가,언제,어디서,무엇을,했다.
+	String doRepeat(String a1, String a2, String a3){
+		int rnd = (int)(Math.random()*3); String result="";
+		switch(rnd) {
+		case 0: result = a1; break;
+		case 1: result = a2; break;
+		case 2: result = a3; break;
+		}
+		return result;
+	}
+	String who() {
+		String who1="정명준이 "; String who2="정종현이 ";
+		String who3="홍기정이 "; 
+		return doRepeat(who1,who2,who3);
+	}
+	String when() {
+		String when1 = "어제 "; String when2 ="지난주 일요일에 ";
+		String when3 = "오늘 "; String result = "";
+		result = doRepeat(when1,when2,when3);
+		return result;
+	}
+	String where() {
+		String where1="길거리에서 "; String where2="카페에서 ";
+		String where3="노래방에서 "; String result = "";
+		result = doRepeat(where1,where2,where3);
+		return result;
+	}
+	String object() {
+		String obj1="술을 "; String obj2="담배를 ";
+		String obj3="행패를 "; 
+		String result = doRepeat(obj1,obj2,obj3);
+		return result;
+	}
+}
+
+public class Study5 {
+
+	public static void main(String[] args) {
+		MakingStory ms = new MakingStory();
+		String who = ms.who(); String when = ms.when();
+		String where = ms.where(); String obj = ms.object();
+		System.out.println(who+when+where+obj);
+	}
+
+}
+
+
