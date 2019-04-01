@@ -1,0 +1,15 @@
+package senior;
+
+import javax.swing.JFrame;
+
+class Abc extends JFrame {
+	Abc(){
+		setSize(200,200);
+		setVisible(true);
+	}
+}
+public class Study2 {
+	public static void main(String[] args) {
+		new Abc();
+	}
+}
